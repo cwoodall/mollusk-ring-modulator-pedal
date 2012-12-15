@@ -38,7 +38,7 @@ inline void setupPWM() {
     // then set again at bottom). Also, set to 10-bit output.
     TCCR1A = (1<<COM1A1) | (0<<COM1A0) | (1<< WGM11) | (1<<WGM10);
     TCCR1B =  (0<<WGM13) | (1<<WGM12) | (1<<CS10);
-    TIMSK1 |= (1<<1);
+    TIMSK1 |= (1);
 
 }
 
@@ -52,6 +52,9 @@ void setup() {
     PORTA = 0x00; // Turn off pullups (specifically do not want a pull
                   // up on AUDIO_INPUT
     
+    /** Setup PWM **/
+    setupPWM();
+
     /** Setup ADC input **/
     setupADC();
 
@@ -59,17 +62,19 @@ void setup() {
     sei();
 }
 
-//ISR(TIM1_OVF_vect) {
-ISR (TIM1_COMPA_vect) {
+ISR(TIM1_OVF_vect) {
+//ISR (TIM1_COMPA_vect) {
     static uint8_t toss = 0;
-
+    static uint8_t LFO_counter;
+    const static uint16_t *waveform = SIN_LUT;
 //    OCR1A = ADCL ;
 //    OCR1AH = ADCH;
     /** @todo This needs to be better **/
     /** @todo instantiate a ring buffer of sorts **/
     toss = ADCL;
-    OCR1A = ((ADCH<<8) | toss);
-
+    OCR1A = (((((ADCH<<8) | toss))));// * (SIN_LUT[LFO_counter]);
+    OCR1A = OCR1A;// * SIN_LUT[LFO_counter]>>2;
+    LFO_counter = (LFO_counter+1) % 255;
 //    toss = ADCH;
 
     ADCSRA |= (1<<ADSC);  
