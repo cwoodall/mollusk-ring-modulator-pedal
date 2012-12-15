@@ -63,7 +63,6 @@ void setup() {
 }
 
 ISR(TIM1_OVF_vect) {
-//ISR (TIM1_COMPA_vect) {
     static uint8_t toss = 0;
     static uint8_t LFO_counter;
     const static uint16_t *waveform = SIN_LUT;
