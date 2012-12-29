@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "wave_lutsmas.h"
+#include "wave_luts.h"
 #include "cw_ringbuf_u8.h"
 
 #define AUDIO_INPUT_PIN PA1
