@@ -6,7 +6,7 @@ MCU_TARGET     = attiny44
 AVRDUDE_TARGET = t44
 OPTIMIZE       = -Os -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections
 DEFS           =
-LIBS           =
+LIBS           = src/*.c
 
 #BAUDRATE       = 57600
 HZ             = 8000000L
@@ -18,7 +18,7 @@ CXX            = avr-gcc
 # Override is only needed by avr-lib build system.
 
 
-override CFLAGS        = -std=c99 -g -DF_CPU=$(HZ) -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) $(DEFS)
+override CFLAGS        = -std=c99 -g -DF_CPU=$(HZ) -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) $(DEFS) -Iinclude
 override LDFLAGS       = -Wl,-Map,$(PRG).map -s -Wl,--gc-sections
 override CPPFLAGS      = -std=c99 -g -DF_CPU=$(HZ) -Wall $(OPTIMIZE) -fvtable-gc -mmcu=$(MCU_TARGET) $(DEFS)
 

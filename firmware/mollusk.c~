@@ -1,33 +1,32 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "wave_lutsma.h"
-#include "cw_ringbuf_u8.h"
+#include "wave_luts.h"
 
 #define AUDIO_INPUT_PIN PA1
 #define AUDIO_INPUT_ADC 1
 #define AUDIO_OUTPUT_PIN PA6
 
-static ringbuf_u8_t input_buffer;
-//static ringbuf_u8_t output_buffer;
+#define IBUFFER_SIZE 16
+#define OBUFFER_SIZE 16
+
+typdef struct {
+} awesome;
+
+uint8_t in_head = 0;
+uint8_t in_buffer[IBUFFER_SIZE];
+uint8_t out_head = 0;
+uint8_t out_buffer[OBUFFER_SIZE];
 
 inline void setAudioOutput( uint8_t audio_lvl ) { OCR0B = audio_lvl; }
 inline void stopAudioOutput( ) { TCCR0B &= ~0x01; }
 inline void startAudioOutput( ) { TCCR0B |= 0x01; }
 
-/**
- * setupADC() get ADC input.
- *
- * @todo make so that 8 MSB can be read out.
- */
 inline void setupADC() {
     ADMUX = 1;
 //    ADCSRB = (1<<ADLAR);
     ADCSRA = (1<<ADEN) | (1<< ADSC) | (1<<ADPS2) | (1<<ADPS1);    
 }
 
-/**
- * Setup audio DAC which is a PWM output on Output A on Timer/Counter 1
- */
 inline void setupPWM() {
     /** 
      * Setup PWM outputs 
@@ -46,13 +45,9 @@ inline void setupPWM() {
 
 }
 
-/**
- * Sets up interrupts, and input output pins
- */
 void setup() {
     cli();
 
-    clear(&input_buffer);
     /** Configure I/O Pins **/
     // Set all pins on PortA to inputs except for the audio output.
     DDRA = 0x00; 
@@ -70,31 +65,30 @@ void setup() {
     sei();
 }
 
-/**
- * Main loop starts here
- */
-int main() {
-    // Setup
-    setup();
-
-    // Loop
-    while(1) {
-    }
-    return 0;
-}
-
-/* INTERRUPTS */
-
-/**
- * 
- */
 ISR(TIM1_COMPB_vect) {
     static uint8_t toss = 0;
-//    static uint8_t LFO_counter;
-//    const static uint16_t *waveform = SIN_LUT; 
-    OCR1A = (get_value(&input_buffer, 0)/2)+(get_value(&input_buffer, 1)/2);    
+    static uint8_t LFO_counter;
+//    const static uint16_t *waveform = SIN_LUT;
+//    OCR1A = ADCL ;
+//    OCR1AH = ADCH;
+    /** @todo This needs to be better **/
+    /** @todo instantiate a ring buffer of sorts **/
     toss = ADCL;
-    push_back(&input_buffer, ADCH);
+//    toss = ((ADCH<<8) | toss);
+    OCR1A = ADCH;
+//    OCR1A =s OCR1A;// * SIN_LUT[LFO_counter]>>2;
+    LFO_counter = (LFO_counter+1) % 255;
+//    toss = ADCH;
 
     ADCSRA |= (1<<ADSC);  
+}
+
+int main() {
+    setup();
+
+
+    while(1) {
+//        setAudioOutput(0xFF);
+    }
+    return 0;
 }

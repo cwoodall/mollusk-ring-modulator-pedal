@@ -1,21 +1,11 @@
 Archive member included because of file (symbol)
 
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o)
-                              mollusk.o (__divmodhi4)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr25/crttn44.o (exit)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_copy_data.o)
                               mollusk.o (__do_copy_data)
 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_clear_bss.o)
                               mollusk.o (__do_clear_bss)
-/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_udivmodhi4.o)
-                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o) (__udivmodhi4)
-
-Allocating common symbols
-Common symbol       size              file
-
-out_buffer          0x10              mollusk.o
-in_buffer           0x10              mollusk.o
 
 Discarded input sections
 
@@ -26,32 +16,42 @@ Discarded input sections
  .text          0x00000000        0x0 mollusk.o
  .data          0x00000000        0x0 mollusk.o
  .bss           0x00000000        0x0 mollusk.o
- .debug_abbrev  0x00000000       0xeb mollusk.o
- .debug_info    0x00000000      0x208 mollusk.o
- .debug_line    0x00000000      0x17f mollusk.o
- .rodata.SIN_LUT
-                0x00000000      0x200 mollusk.o
- .rodata.SQUARE_LUT
-                0x00000000      0x200 mollusk.o
- .rodata.SAW_LUT
-                0x00000000      0x200 mollusk.o
- .rodata.TRIANGLE_LUT
-                0x00000000      0x200 mollusk.o
- .bss.in_head   0x00000000        0x1 mollusk.o
- .bss.out_head  0x00000000        0x1 mollusk.o
+ .debug_abbrev  0x00000000       0xed mollusk.o
+ .debug_info    0x00000000      0x19c mollusk.o
+ .debug_line    0x00000000      0x1a7 mollusk.o
+ .rodata.sineLUT
+                0x00000000      0x100 mollusk.o
+ .rodata.squareLUT
+                0x00000000      0x100 mollusk.o
+ .rodata.sawLUT
+                0x00000000      0x100 mollusk.o
  .debug_frame   0x00000000       0x40 mollusk.o
  .debug_pubnames
-                0x00000000       0xa2 mollusk.o
+                0x00000000       0x59 mollusk.o
  .debug_pubtypes
-                0x00000000       0x2b mollusk.o
+                0x00000000       0x3c mollusk.o
  .debug_aranges
                 0x00000000       0x30 mollusk.o
  .debug_ranges  0x00000000       0x20 mollusk.o
- .debug_str     0x00000000      0x168 mollusk.o
- COMMON         0x00000000       0x20 mollusk.o
- .text          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o)
- .data          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o)
- .bss           0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o)
+ .debug_str     0x00000000      0x143 mollusk.o
+ .text          0x00000000        0x0 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .data          0x00000000        0x0 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .bss           0x00000000        0x0 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_abbrev  0x00000000      0x109 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_info    0x00000000      0x193 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_line    0x00000000      0x188 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .text.create_ringbuf_u8_t
+                0x00000000       0x5e /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_frame   0x00000000       0x50 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_loc     0x00000000       0xb4 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_pubnames
+                0x00000000       0x50 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_pubtypes
+                0x00000000       0x2f /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_aranges
+                0x00000000       0x38 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_ranges  0x00000000       0x28 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+ .debug_str     0x00000000      0x138 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
  .text          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
  .data          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
  .bss           0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
@@ -64,9 +64,6 @@ Discarded input sections
  .data          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_clear_bss.o)
  .bss           0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_clear_bss.o)
  .text.libgcc   0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_clear_bss.o)
- .text          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_udivmodhi4.o)
- .data          0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_udivmodhi4.o)
- .bss           0x00000000        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_udivmodhi4.o)
 
 Memory Configuration
 
@@ -83,6 +80,7 @@ Linker script and memory map
 
 LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr25/crttn44.o
 LOAD mollusk.o
+LOAD /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
 LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
 LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr25/libc.a
 LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
@@ -177,7 +175,7 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x13c
+.text           0x00000000      0x164
  *(.vectors)
  .vectors       0x00000000       0x22 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr25/crttn44.o
                 0x00000000                __vectors
@@ -240,34 +238,37 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
                 0x00000058                __vector_3
                 0x00000058                __vector_11
                 0x00000058                __vector_13
-                0x00000058                __vector_7
                 0x00000058                __vector_5
                 0x00000058                __vector_4
                 0x00000058                __vector_9
                 0x00000058                __vector_2
                 0x00000058                __vector_15
+                0x00000058                __vector_8
                 0x00000058                __vector_14
                 0x00000058                __vector_10
                 0x00000058                __vector_1
                 0x0000005a                . = ALIGN (0x2)
  *(.text.*)
- .text.setup    0x0000005a       0x22 mollusk.o
+ .text.setup    0x0000005a       0x30 mollusk.o
                 0x0000005a                setup
- .text.__vector_8
-                0x0000007c       0x6a mollusk.o
-                0x0000007c                __vector_8
- .text.main     0x000000e6        0x4 mollusk.o
-                0x000000e6                main
- .text.libgcc   0x000000ea       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_divmodhi4.o)
-                0x000000ea                __divmodhi4
-                0x000000ea                _div
- .text.libgcc   0x00000110       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_udivmodhi4.o)
-                0x00000110                __udivmodhi4
-                0x00000138                . = ALIGN (0x2)
+ .text.main     0x0000008a        0x4 mollusk.o
+                0x0000008a                main
+ .text.__vector_7
+                0x0000008e       0x80 mollusk.o
+                0x0000008e                __vector_7
+ .text.clear    0x0000010e       0x1e /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+                0x0000010e                clear
+ .text.push_back
+                0x0000012c       0x1e /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+                0x0000012c                push_back
+ .text.get_value
+                0x0000014a       0x16 /var/folders/hX/hXBB4wZrEYO-ZmkKU5fWSk+++TI/-Tmp-//cctktf1Z.o
+                0x0000014a                get_value
+                0x00000160                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000138        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
-                0x00000138                exit
-                0x00000138                _exit
+ .fini9         0x00000160        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
+                0x00000160                exit
+                0x00000160                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -286,11 +287,11 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000138        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
+ .fini0         0x00000160        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000013c                _etext = .
+                0x00000164                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000013c
+.data           0x00800060        0x0 load address 0x00000164
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -301,25 +302,25 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
                 0x00800060                _edata = .
                 0x00800060                PROVIDE (__data_end, .)
 
-.bss            0x00800060        0x2
+.bss            0x00800060      0x102
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.LFO_counter.1132
-                0x00800060        0x1 mollusk.o
- .bss.toss.1131
-                0x00800061        0x1 mollusk.o
+ .bss.input_buffer
+                0x00800060      0x101 mollusk.o
+ .bss.toss.1143
+                0x00800161        0x1 mollusk.o
  *(COMMON)
-                0x00800062                PROVIDE (__bss_end, .)
-                0x0000013c                __data_load_start = LOADADDR (.data)
-                0x0000013c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800162                PROVIDE (__bss_end, .)
+                0x00000164                __data_load_start = LOADADDR (.data)
+                0x00000164                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800062        0x0
-                0x00800062                PROVIDE (__noinit_start, .)
+.noinit         0x00800162        0x0
+                0x00800162                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800062                PROVIDE (__noinit_end, .)
-                0x00800062                _end = .
-                0x00800062                PROVIDE (__heap_start, .)
+                0x00800162                PROVIDE (__noinit_end, .)
+                0x00800162                _end = .
+                0x00800162                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -399,6 +400,10 @@ LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr25/libgcc.a
  *(.debug_macinfo)
 OUTPUT(mollusk.elf elf32-avr)
 LOAD linker stubs
+
+.debug_pubtypes
+
+.debug_ranges
 
 .debug_pubtypes
 
